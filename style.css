@@ -83,7 +83,6 @@ img {
     display: flex;
     gap: 40px;
     list-style: none;
-    /* Ensure no bullets */
 }
 
 .nav-item {
@@ -98,11 +97,6 @@ img {
 
 .nav-item:hover {
     opacity: 0.5;
-}
-
-/* Remove any potential dots/bullets from items */
-.nav-links li::before {
-    content: none !important;
 }
 
 /* --- HERO SLIDER --- */
@@ -144,7 +138,6 @@ img {
     opacity: 0;
     transform: translateY(40px);
     transition: all 0.9s 0.4s var(--ease-bounce);
-    /* BOUNCE entrance */
 }
 
 .slide.active .slide-text {
@@ -188,7 +181,6 @@ img {
     border-radius: 4px;
     gap: 15px;
     transition: all 0.4s var(--ease-bounce);
-    /* BOUNCE hover */
 }
 
 .btn-store:hover {
@@ -223,7 +215,6 @@ img {
     opacity: 0;
     transform: scale(0.9) translateX(40px);
     transition: all 1.2s 0.2s var(--ease-bounce);
-    /* BOUNCE scale entrance */
 }
 
 .slide.active .slide-visual {
@@ -238,12 +229,8 @@ img {
     justify-content: center;
 }
 
-.flagship-mockup {
-    max-width: none;
-}
-
 .flagship-mockup .phone-mockup {
-    height: 90vh;
+    height: 85vh;
     width: auto;
 }
 
@@ -273,7 +260,6 @@ img {
     border-radius: 50%;
     position: relative;
     transition: all 0.4s var(--ease-bounce);
-    /* BOUNCE button */
 }
 
 .nav-control:hover {
@@ -345,7 +331,6 @@ img {
 
 .visual-corner-frame:hover {
     transform: scale(1.05);
-    /* Architectural zoom */
 }
 
 .corner {
@@ -437,7 +422,6 @@ img {
     text-transform: uppercase;
     border-radius: 4px;
     transition: all 0.5s var(--ease-bounce);
-    /* BOUNCE hover */
 }
 
 .btn-premium:hover {
@@ -478,32 +462,14 @@ img {
     color: #000;
 }
 
-/* --- MOBILE RESPONSIVENESS --- */
-@media (max-width: 1000px) {
-    .about-section {
-        height: auto;
-        padding: 80px 0;
+/* --- ROBUST MOBILE RESPONSIVENESS (CENTERED) --- */
+@media (max-width: 1024px) {
+    .slide-inner {
+        gap: 3vw;
     }
 
-    .about-split-container {
-        flex-direction: column;
-    }
-
-    .about-visual-column {
-        padding: 40px;
-    }
-
-    .visual-corner-frame {
-        height: 40vh;
-    }
-
-    .about-content-column {
-        padding: 40px;
-        text-align: center;
-    }
-
-    .about-text-wrapper {
-        max-width: 100%;
+    .slide-title {
+        font-size: clamp(3rem, 6vw, 6rem);
     }
 }
 
@@ -512,79 +478,165 @@ img {
         --header-h: 70px;
     }
 
-    /* Header Refinements */
+    /* Header */
     .global-header {
-        padding: 0 6vw;
+        padding: 0 5vw;
+    }
+
+    .header-container {
+        justify-content: space-between;
     }
 
     .nav-links {
-        gap: 20px;
+        gap: 15px;
     }
 
     .nav-item {
         font-size: 10px;
     }
 
-    /* Hero Slider Mobile Optimization */
+    /* Slider Overall */
     .hp-slider-section {
-        height: auto;
-        min-height: 100vh;
-        overflow-y: auto;
-    }
-
-    .slider-wrapper {
-        height: auto;
+        height: 100vh;
     }
 
     .slide {
-        padding: 120px 6vw 80px;
-        height: auto;
-        min-height: 100vh;
+        padding: 90px 8vw 50px;
         flex-direction: column;
-        /* Stack vertically for phones */
+        justify-content: flex-start;
+        /* Flow from top */
     }
 
+    /* Content Alignment */
     .slide-inner {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 40px;
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: none !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 30px !important;
+        width: 100%;
     }
 
+    /* Force Center for everything inside Slide Text */
     .slide-text {
         order: 2;
-        /* Text below image on mobile */
+        width: 100%;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        transform: translateY(20px);
+        opacity: 1 !important;
+        /* Force visible for debug if needed */
+    }
+
+    .slide.active .slide-text {
+        transform: translateY(0);
     }
 
     .slide-visual {
         order: 1;
-        /* Image first on mobile */
-        transform: scale(0.8);
-        margin-bottom: 20px;
+        width: 100%;
+        display: flex !important;
+        justify-content: center !important;
+        margin-bottom: 10px;
+        transform: scale(0.85);
     }
 
+    /* Mockup Sizing */
     .flagship-mockup .phone-mockup {
-        height: 45vh;
-        /* Reduced significantly for vertical mobile */
-        width: auto;
+        height: 38vh !important;
+        width: auto !important;
+    }
+
+    /* Typography */
+    .slide-status {
+        margin-bottom: 15px;
+        font-size: 9px;
     }
 
     .slide-title {
-        font-size: 3.2rem;
-        line-height: 0.95;
+        font-size: 3.2rem !important;
+        margin-left: 0 !important;
+        margin-bottom: 15px;
     }
 
     .slide-desc {
-        font-size: 0.95rem;
-        max-width: 100%;
-        margin: 0 auto 30px;
+        font-size: 0.9rem;
+        margin: 0 auto 25px !important;
+        max-width: 300px;
     }
 
+    /* Buttons */
+    .slide-actions {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn-store {
+        padding: 14px 24px;
+        width: auto;
+    }
+
+    /* About Section Mobile */
+    .about-section {
+        height: auto;
+        padding: 60px 0;
+    }
+
+    .about-split-container {
+        flex-direction: column;
+    }
+
+    .about-visual-column {
+        padding: 30px;
+    }
+
+    .visual-corner-frame {
+        height: 35vh;
+        padding: 20px;
+    }
+
+    .corner {
+        width: 25px;
+        height: 25px;
+    }
+
+    .about-content-column {
+        padding: 30px;
+        text-align: center;
+    }
+
+    .about-headline {
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+    }
+
+    .about-body p {
+        font-size: 1rem;
+        margin-bottom: 35px;
+    }
+
+    /* Nav UI */
     .slider-nav {
-        bottom: 25px;
+        bottom: 20px;
+        left: 5vw;
+        right: 5vw;
+    }
+
+    .nav-control {
+        width: 40px;
+        height: 40px;
     }
 
     .slide-counter {
         display: none;
-        /* Hide counter on small screens to save space */
     }
+}
+
+/* Legal Page Overrides */
+.legal-body-container .privacy-strip {
+    min-height: auto !important;
+    padding: 120px 8vw 60px !important;
 }
