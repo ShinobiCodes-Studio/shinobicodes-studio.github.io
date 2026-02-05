@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHINOBICODES | PORTFOLIO</title>
+    <meta name="description" content="Digital Craftsman - Building Privacy-First Tools.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Global Header -->
+    <header class="global-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">SHINOBICODES</a>
+            </div>
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <!-- PROJECTS hidden as requested -->
+                    <li><a href="about-us.html" class="nav-item">ABOUT</a></li>
+                    <li><a href="mailto:mailshinobicode@gmail.com" class="nav-item">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Dynamic Hero Slider -->
+        <section id="work" class="hp-slider-section">
+            <div class="slider-wrapper" id="sliderWrapper">
+
+                <!-- Slide 1: Momo -->
+                <div class="slide active">
+                    <div class="slide-inner">
+                        <div class="slide-text">
+                            <span class="slide-status">01 / FEATURED PROJECT</span>
+                            <h2 class="slide-title">Momo</h2>
+                            <p class="slide-desc">Financial clarity through extreme reduction. A privacy-first ledger
+                                for the modern minimalist.</p>
+                            <div class="slide-actions">
+                                <a href="#" class="btn-store">
+                                    <span class="btn-icon">▶</span>
+                                    <span class="btn-text">Download on <strong>Play Store</strong></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slide-visual">
+                            <div class="mockup-container flagship-mockup">
+                                <img src="assets/momo-mockup.png" alt="Momo Mockup" class="phone-mockup">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: AntiTodo -->
+                <div class="slide">
+                    <div class="slide-inner">
+                        <div class="slide-text">
+                            <span class="slide-status">02 / PRODUCT DESIGN</span>
+                            <h2 class="slide-title">AntiTodo</h2>
+                            <p class="slide-desc">The art of completing by doing less. A digital sanctuary for
+                                high-focus deep work.</p>
+                            <div class="slide-actions">
+                                <span class="badge-coming">COMING 2026</span>
+                            </div>
+                        </div>
+                        <div class="slide-visual">
+                            <div class="mockup-container">
+                                <img src="assets/antitodo.png" alt="AntiTodo Mockup" class="phone-mockup">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: VersePath -->
+                <div class="slide">
+                    <div class="slide-inner">
+                        <div class="slide-text">
+                            <span class="slide-status">03 / PRODUCT DESIGN</span>
+                            <h2 class="slide-title">VersePath</h2>
+                            <p class="slide-desc">Bible study reimagined. A clean, distraction-free environment for
+                                spiritual growth.</p>
+                            <div class="slide-actions">
+                                <span class="badge-coming">COMING 2026</span>
+                            </div>
+                        </div>
+                        <div class="slide-visual">
+                            <div class="mockup-container">
+                                <img src="assets/versepath.png" alt="VersePath Mockup" class="phone-mockup">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Slider Navigation -->
+            <div class="slider-nav">
+                <button class="nav-control prev" id="prevBtn" aria-label="Previous"></button>
+                <div class="slide-counter">
+                    <span id="currentSlide">01</span> / <span id="totalSlides">03</span>
+                </div>
+                <button class="nav-control next" id="nextBtn" aria-label="Next"></button>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="about-split-container">
+                <!-- Visual Side (Left) -->
+                <div class="about-visual-column">
+                    <div class="visual-corner-frame">
+                        <div class="corner tl"></div>
+                        <div class="corner tr"></div>
+                        <div class="corner bl"></div>
+                        <div class="corner br"></div>
+                        <img src="assets/about-visual.jpg" alt="Brand Identity" class="about-brand-img">
+                    </div>
+                </div>
+
+                <!-- Content Side (Right) -->
+                <div class="about-content-column">
+                    <div class="about-text-wrapper">
+                        <h4 class="about-label">CRAFTSMANSHIP</h4>
+                        <h2 class="about-headline">SHINOBICODES. BUILDING TOOLS FOR A QUIET DIGITAL LIFE.</h2>
+                        <div class="about-body">
+                            <p>I believe software should be quiet. In an age of constant noise and data harvesting,
+                                ShinobiCodes exists to return ownership to the user. Every tool is crafted to reside
+                                locally, respecting your focus and your privacy. No trackers. No cloud processing. Just
+                                refined utility.</p>
+                        </div>
+                        <a href="mailto:mailshinobicode@gmail.com" class="btn-premium">CONTACT US</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="global-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>&copy; 2026 SHINOBICODES.</p>
+            </div>
+            <div class="footer-right">
+                <nav class="footer-nav">
+                    <a href="privacy.html">PRIVACY</a>
+                    <a href="terms.html">TERMS</a>
+                    <a href="about-us.html">ABOUT</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
