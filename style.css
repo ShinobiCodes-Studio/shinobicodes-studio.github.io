@@ -478,7 +478,7 @@ img {
     color: #000;
 }
 
-/* --- MOBILE --- */
+/* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 1000px) {
     .about-section {
         height: auto;
@@ -504,5 +504,87 @@ img {
 
     .about-text-wrapper {
         max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --header-h: 70px;
+    }
+
+    /* Header Refinements */
+    .global-header {
+        padding: 0 6vw;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-item {
+        font-size: 10px;
+    }
+
+    /* Hero Slider Mobile Optimization */
+    .hp-slider-section {
+        height: auto;
+        min-height: 100vh;
+        overflow-y: auto;
+    }
+
+    .slider-wrapper {
+        height: auto;
+    }
+
+    .slide {
+        padding: 120px 6vw 80px;
+        height: auto;
+        min-height: 100vh;
+        flex-direction: column;
+        /* Stack vertically for phones */
+    }
+
+    .slide-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .slide-text {
+        order: 2;
+        /* Text below image on mobile */
+    }
+
+    .slide-visual {
+        order: 1;
+        /* Image first on mobile */
+        transform: scale(0.8);
+        margin-bottom: 20px;
+    }
+
+    .flagship-mockup .phone-mockup {
+        height: 45vh;
+        /* Reduced significantly for vertical mobile */
+        width: auto;
+    }
+
+    .slide-title {
+        font-size: 3.2rem;
+        line-height: 0.95;
+    }
+
+    .slide-desc {
+        font-size: 0.95rem;
+        max-width: 100%;
+        margin: 0 auto 30px;
+    }
+
+    .slider-nav {
+        bottom: 25px;
+    }
+
+    .slide-counter {
+        display: none;
+        /* Hide counter on small screens to save space */
     }
 }
